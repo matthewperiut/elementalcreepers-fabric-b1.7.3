@@ -6,6 +6,10 @@ import net.glasslauncher.mods.api.gcapi.api.MultiplayerSynced;
 public class ElementalCreepersConfigFields
 {
     @MultiplayerSynced
+    @ConfigName("Biome Specific (Restart Required)")
+    public Boolean biomeSpecific = false;
+
+    @MultiplayerSynced
     @ConfigName("Water Creeper Spawn Rate")
     public Integer waterCreeperSpawn = 6;
     @MultiplayerSynced

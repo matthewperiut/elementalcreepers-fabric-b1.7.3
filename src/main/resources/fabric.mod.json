@@ -22,6 +22,7 @@
   "entrypoints": {
     "stationapi:event_bus": [
       "com.matthewperiut.elementalcreepers.ElementalCreepersMod",
+      "com.matthewperiut.elementalcreepers.entity.BiomeModificationListener",
       "com.matthewperiut.elementalcreepers.entity.EntityListener"
     ],
     "stationapi:event_bus_client": [

@@ -9,8 +9,9 @@ import net.minecraft.entity.monster.Creeper;
 import net.minecraft.level.Level;
 import net.modificationstation.stationapi.api.util.Identifier;
 import net.modificationstation.stationapi.api.server.entity.MobSpawnDataProvider;
+import net.modificationstation.stationapi.api.worldgen.biome.StationBiome;
 
-public class WaterCreeper extends Creeper implements MobSpawnDataProvider, CreeperExplosion
+public class WaterCreeper extends Creeper implements MobSpawnDataProvider, CreeperExplosion, StationBiome
 {
     public WaterCreeper(Level arg)
     {
