@@ -28,7 +28,7 @@
     "stationapi:event_bus_client": [
       "com.matthewperiut.elementalcreepers.client.EntityRendererListener"
     ],
-    "gcapi": [
+    "gcapi3": [
       "com.matthewperiut.elementalcreepers.ElementalCreepersMod"
     ]
   },

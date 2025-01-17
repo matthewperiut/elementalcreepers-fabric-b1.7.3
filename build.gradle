@@ -1,6 +1,6 @@
 plugins {
-    id 'fabric-loom' version '1.7.3'
-    id 'babric-loom-extension' version '1.7.4'
+    id 'fabric-loom' version '1.8.12'
+    id 'babric-loom-extension' version '1.8.9'
     id 'maven-publish'
 }
 
@@ -87,9 +87,13 @@ dependencies {
         transitive false
     }
 
-    modRuntimeOnly ("com.github.matthewperiut:stapi-fast-intro:17a7ed0") {
+    modImplementation("com.github.paulevsGitch:BHCreative:${project.bhcreative_version}"){
         transitive false
     }
+
+//	modRuntimeOnly ("com.github.matthewperiut:stapi-fast-intro:17a7ed0") {
+//		transitive false
+//	}
 }
 
 processResources {
