@@ -1,7 +1,7 @@
 plugins {
-    id 'fabric-loom' version '1.8.12'
-    id 'babric-loom-extension' version '1.8.9'
     id 'maven-publish'
+    id 'fabric-loom' version '1.9.2'
+    id 'babric-loom-extension' version '1.9.4'
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
@@ -58,7 +58,6 @@ dependencies {
     implementation "org.apache.logging.log4j:log4j-slf4j18-impl:2.16.0"
     implementation "blue.endless:jankson:1.2.1"
     implementation(include("me.carleslc:Simple-Yaml:1.8.4") as Dependency)
-    implementation("io.github.llamalad7:mixinextras-fabric:${project.properties["mixinextras_version"]}")
 
     modImplementation "net.modificationstation:StationAPI:${project.stapi_version}"
 
@@ -75,25 +74,25 @@ dependencies {
         transitive false
     }
 
-    modImplementation("net.glasslauncher.mods:AlwaysMoreItems:${project.alwaysmoreitems_version}") {
-        transitive false
-    }
+//    modImplementation("net.glasslauncher.mods:AlwaysMoreItems:${project.alwaysmoreitems_version}") {
+//        transitive false
+//    }
 
     modImplementation("com.github.matthewperiut:retrocommands:${project.retrocommands_version}") {
         transitive false
     }
 
-    modImplementation("net.danygames2014:spawneggs:${project.spawneggs_version}") {
-        transitive false
-    }
+//    modImplementation("net.danygames2014:spawneggs:${project.spawneggs_version}") {
+//        transitive false
+//    }
 
 //    modImplementation("com.github.paulevsGitch:BHCreative:${project.bhcreative_version}"){
 //        transitive false
 //    }
 
-//	modRuntimeOnly ("com.github.matthewperiut:stapi-fast-intro:17a7ed0") {
-//		transitive false
-//	}
+    modRuntimeOnly ("maven.modrinth:fast-stapi-intro:${project.stapi_fast_intro_version}") {
+        transitive false
+    }
 }
 
 processResources {

@@ -6,8 +6,8 @@ import net.mine_diver.unsafeevents.listener.EventListener;
 import net.minecraft.world.biome.Biome;
 import net.modificationstation.stationapi.api.event.worldgen.biome.BiomeModificationEvent;
 
-
 public class BiomeModificationListener {
+
     @EventListener
     public void event(BiomeModificationEvent event) {
         if (true == ElementalCreepersMod.config.biomeSpecific) {
