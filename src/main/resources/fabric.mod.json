@@ -15,7 +15,7 @@
     "issues": "https://github.com/matthewperiut/elementalcreepers-fabric-b1.7.3/issues"
   },
 
-  "license": "CC0-1.0",
+  "license": "MIT",
   "icon": "assets/elementalcreepers/icon.png",
 
   "environment": "*",
