@@ -1,6 +1,7 @@
 package com.matthewperiut.elementalcreepers.mixin;
 
 import com.matthewperiut.elementalcreepers.ElementalCreepersMod;
+import com.matthewperiut.elementalcreepers.config.BiomeSpawnEnum;
 import com.matthewperiut.elementalcreepers.config.ElementalCreepersConfigFields;
 import com.matthewperiut.elementalcreepers.entity.behavior.*;
 import org.spongepowered.asm.mixin.Mixin;
@@ -21,7 +22,7 @@ public class BiomeMixin
 
     @Inject(method = "<init>", at = @At("TAIL"))
     private void addElementalCreepers(CallbackInfo ci) {
-        if (false == ElementalCreepersMod.config.biomeSpecific) {
+        if (BiomeSpawnEnum.ALL_BIOMES == ElementalCreepersMod.config.elementalCreepersBiomeSpawn) {
             spawnableMonsters.add(new EntitySpawnGroup(CookieCreeper.class, ElementalCreepersMod.config.cookieCreeperSpawn));
             spawnableMonsters.add(new EntitySpawnGroup(EarthCreeper.class, ElementalCreepersMod.config.earthCreeperSpawn));
             spawnableMonsters.add(new EntitySpawnGroup(ElectricCreeper.class, ElementalCreepersMod.config.electricCreeperSpawn));

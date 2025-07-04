@@ -30,6 +30,9 @@
     ],
     "gcapi3": [
       "com.matthewperiut.elementalcreepers.ElementalCreepersMod"
+    ],
+    "gcapi3:factory_provider": [
+      "com.matthewperiut.elementalcreepers.config.BiomeSpawnEnumFactory"
     ]
   },
   "mixins": [
