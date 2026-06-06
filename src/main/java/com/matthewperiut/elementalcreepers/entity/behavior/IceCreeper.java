@@ -41,11 +41,11 @@ public class IceCreeper extends CreeperEntity implements MobSpawnDataProvider, C
             for(int y = -radius; y <= radius; ++y) {
                 for(int z = -radius; z <= radius; ++z) {
                     if(level.getMaterial((int)posX + x, (int)posY + y, (int)posZ + z) == Material.WATER && level.getBlockMeta((int)posX + x, (int)posY + y, (int)posZ + z) == 0) {
-                        level.setBlockStateWithNotify((int)posX + x, (int)posY + y, (int)posZ + z, Block.ICE.getDefaultState());
+                        level.setBlockState((int)posX + x, (int)posY + y, (int)posZ + z, Block.ICE.getDefaultState());
                     } else if(level.getMaterial((int)posX + x, (int)posY + y, (int)posZ + z) == Material.LAVA && level.getBlockMeta((int)posX + x, (int)posY + y, (int)posZ + z) == 0) {
-                        level.setBlockStateWithNotify((int)posX + x, (int)posY + y, (int)posZ + z, Block.OBSIDIAN.getDefaultState());
+                        level.setBlockState((int)posX + x, (int)posY + y, (int)posZ + z, Block.OBSIDIAN.getDefaultState());
                     } else if(level.canPlace(Block.SNOW.id, (int)posX + x, (int)posY + y, (int)posZ + z, false, 0) && !level.canPlace(Block.SNOW.id, (int)posX + x, (int)posY + y - 1, (int)posZ + z, false, 0)) {
-                        level.setBlockStateWithNotify((int)posX + x, (int)posY + y, (int)posZ + z, Block.SNOW.getDefaultState());
+                        level.setBlockState((int)posX + x, (int)posY + y, (int)posZ + z, Block.SNOW.getDefaultState());
                     }
                 }
             }

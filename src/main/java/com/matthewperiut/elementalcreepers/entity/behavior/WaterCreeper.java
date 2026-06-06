@@ -41,7 +41,7 @@ public class WaterCreeper extends CreeperEntity implements MobSpawnDataProvider,
             for(int y = -radius; y <= radius; ++y) {
                 for(int z = -radius; z <= radius; ++z) {
                     if(level.canPlace(Block.WATER.id, (int)posX + x, (int)posY + y, (int)posZ + z, false, 0) && !level.canPlace(Block.WATER.id, (int)posX + x, (int)posY + y - 1, (int)posZ + z, false, 0)) {
-                        level.setBlockStateWithNotify((int)posX + x, (int)posY + y, (int)posZ + z, Block.WATER.getDefaultState());
+                        level.setBlockState((int)posX + x, (int)posY + y, (int)posZ + z, Block.WATER.getDefaultState());
                     }
                 }
             }

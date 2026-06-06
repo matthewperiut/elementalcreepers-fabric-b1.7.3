@@ -40,7 +40,7 @@ public class MagmaCreeper extends CreeperEntity implements MobSpawnDataProvider,
             for(int y = -radius; y <= radius; ++y) {
                 for(int z = -radius; z <= radius; ++z) {
                     if(level.canPlace(Block.LAVA.id, (int)posX + x, (int)posY + y, (int)posZ + z, false, 0) && !level.canPlace(Block.LAVA.id, (int)posX + x, (int)posY + y - 1, (int)posZ + z, false, 0)) {
-                        level.setBlockStateWithNotify((int)posX + x, (int)posY + y, (int)posZ + z, Block.LAVA.getDefaultState());
+                        level.setBlockState((int)posX + x, (int)posY + y, (int)posZ + z, Block.LAVA.getDefaultState());
                     }
                 }
             }

@@ -44,7 +44,7 @@ public class FireCreeper extends CreeperEntity implements MobSpawnDataProvider, 
                     if(level.canPlace(Block.WATER.id, (int)posX + x, (int)posY + y, (int)posZ + z, false, 0) && !level.canPlace(Block.WATER.id, (int)posX + x, (int)posY + y - 1, (int)posZ + z, false, 0)) {
                         Random rand = new Random();
                         if(rand.nextBoolean()) {
-                            level.setBlockStateWithNotify((int)posX + x, (int)posY + y, (int)posZ + z, Block.FIRE.getDefaultState());
+                            level.setBlockState((int)posX + x, (int)posY + y, (int)posZ + z, Block.FIRE.getDefaultState());
                         }
                     }
                 }
